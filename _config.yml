@@ -10,10 +10,12 @@ markdown: kramdown
 
 # Disable Rouge syntax highlighting wrappers — keep code blocks as plain
 # <pre><code class="language-X">...</code></pre> so Medium's import handles them cleanly.
+# `syntax_highlighter_opts.disable: true` is the documented way to force-disable Rouge.
 kramdown:
   input: GFM
-  syntax_highlighter: ~
   hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true
 
 permalink: /:year/:month/:day/:title/
 
